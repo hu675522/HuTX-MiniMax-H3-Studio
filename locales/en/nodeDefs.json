@@ -1,0 +1,169 @@
+{
+  "GHLocalVideoInputDualEngineGH": {
+    "display_name": "HuTX · H3 Dual-Engine Video Input · Fused / HyperFlow",
+    "inputs": {
+      "engine_mode": { "name": "generation engine", "options": { "fused_turbo": "Fused Turbo 4-Step", "hyperflow": "HyperFlow 8-Step" } },
+      "fused_model_name": { "name": "Fused model" },
+      "hyperflow_base_model": { "name": "HyperFlow base" },
+      "hyperflow_weights": { "name": "HyperFlow weights" },
+      "driver_audio": { "name": "driver audio" },
+      "continuation_latent": { "name": "continuation latent (reserved)" },
+      "continuation_frames": { "name": "continuation end frames (reserved)" },
+      "continuation_audio": { "name": "continuation end audio (reserved)" }
+    }
+  },
+  "GHLocalVideoDualEngineOutputGH": {
+    "display_name": "HuTX · H3 Dual-Engine Output"
+  },
+  "HuTXH3PreserveFirstPassAudioGH": {
+    "display_name": "HuTX · Preserve First-Pass Audio",
+    "inputs": {
+      "first_pass_latent": { "name": "first-pass AV latent" },
+      "selected_pass_latent": { "name": "selected video AV latent" }
+    },
+    "outputs": { "0": { "name": "AV latent" } }
+  },
+  "GHLocalVideoInputGH": {
+  "display_name": "HuTX · Local Video Input · 5-in-1"
+},
+  "MiniMaxH3IntegrationGH": {
+    "display_name": "HuTX · MiniMax H3 Local Studio",
+    "inputs": {
+      "clip_name": { "name": "CLIP model" },
+      "video_vae_name": { "name": "video VAE" },
+      "audio_vae_name": { "name": "audio VAE" },
+      "aspect": {
+        "name": "aspect ratio",
+        "options": {
+          "adaptive": "adaptive",
+          "16:9": "16:9",
+          "9:16": "9:16",
+          "3:2": "3:2",
+          "2:3": "2:3",
+          "4:3": "4:3",
+          "3:4": "3:4",
+          "1:1": "1:1",
+          "21:9": "21:9"
+        }
+      },
+      "megapixels": { "name": "megapixels" },
+      "prompt_override": { "name": "prompt" },
+      "duration_seconds": { "name": "duration (seconds)" }
+    },
+    "outputs": { "0": { "name": ">" } }
+  },
+  "MiniMaxH3IntegrationAdapterGH": {
+    "display_name": "HuTX · MiniMax H3 Adapter",
+    "inputs": { "integration": { "name": "<" } },
+    "outputs": {
+      "0": { "name": "positive" },
+      "1": { "name": "AV latent" },
+      "2": { "name": "video VAE" },
+      "3": { "name": "audio VAE" },
+      "4": { "name": "model number" },
+      "5": { "name": "mux audio" },
+      "6": { "name": "is original audio" },
+      "7": { "name": "conditioned prompt" },
+      "8": { "name": "media map JSON" },
+      "9": { "name": "report" }
+    }
+  },
+  "MiniMaxH3DualClockT8GH": {
+    "display_name": "HuTX · MiniMax H3 Dual Clock T8",
+    "inputs": {
+      "model": { "name": "model" },
+      "av_latent": { "name": "AV latent" },
+      "steps": { "name": "steps" },
+      "shift_video": { "name": "video shift" },
+      "shift_audio": { "name": "audio shift" },
+      "sampler_name": { "name": "sampler" },
+      "scheduler": { "name": "scheduler" }
+    },
+    "outputs": {
+      "0": { "name": "model" },
+      "1": { "name": "sampler" },
+      "2": { "name": "sigmas" }
+    }
+  },
+  "MiniMaxH3AVDecodeT8GH": {
+    "display_name": "HuTX · MiniMax H3 AV Decode T8",
+    "inputs": {
+      "av_latent": { "name": "AV latent" },
+      "video_vae": { "name": "video VAE" },
+      "audio_vae": { "name": "audio VAE" }
+    },
+    "outputs": {
+      "0": { "name": "frames" },
+      "1": { "name": "generated audio" },
+      "2": { "name": "video latent" },
+      "3": { "name": "audio latent" }
+    }
+  },
+  "GHCloudVideoInputGH": {
+    "display_name": "HuTX Cloud Video Input · 5-in-1",
+    "inputs": {
+      "main_mode": { "name": "main mode" },
+      "prompt": { "name": "prompt" },
+      "aspect": { "name": "aspect ratio" },
+      "duration_seconds": { "name": "duration (seconds)" },
+      "optimizer_enabled": { "name": "prompt optimizer enabled" }
+    },
+    "outputs": {
+      "0": { "name": "HuTX video request" },
+      "1": { "name": "optimized prompt" },
+      "2": { "name": "optimizer report" }
+    }
+  },
+  "FalH3MaxVideoGH": {
+    "display_name": "HuTX · MiniMax H3 Max / Turbo",
+    "inputs": {
+      "integration": { "name": "request / integration" },
+      "model_variant": { "name": "model" },
+      "execution_mode": { "name": "execution mode" },
+      "resolution": { "name": "resolution" },
+      "prompt_expansion_mode": { "name": "prompt expansion" },
+      "seed": { "name": "seed" },
+      "enable_safety_checker": { "name": "safety checker" },
+      "max_estimated_cost": { "name": "max estimated cost (USD)" }
+    },
+    "outputs": {
+      "0": { "name": "video" },
+      "1": { "name": "video URL" },
+      "2": { "name": "request ID" },
+      "3": { "name": "endpoint" },
+      "4": { "name": "report" },
+      "5": { "name": "expanded prompt" }
+    }
+  },
+  "HuTXH3HyperFlowCompatibility": {
+    "display_name": "HuTX · H3 HyperFlow · Compatibility Check",
+    "inputs": { "model": { "name": "model" } },
+    "outputs": { "0": { "name": "report" } }
+  },
+  "HuTXH3HyperFlowPatch": {
+    "display_name": "HuTX · H3 HyperFlow · 8-Step LoRA Patch",
+    "inputs": {
+      "model": { "name": "model" },
+      "hyperflow_weights": { "name": "HyperFlow weights" },
+      "strength": { "name": "strength" },
+      "strict_architecture": { "name": "strict architecture" }
+    },
+    "outputs": {
+      "0": { "name": "model" },
+      "1": { "name": "report" }
+    }
+  },
+  "HuTXH3HyperFlowSampler": {
+    "display_name": "HuTX · H3 HyperFlow · 8-Step Dual Clock",
+    "inputs": {
+      "model": { "name": "model" },
+      "av_latent": { "name": "AV latent" }
+    },
+    "outputs": {
+      "0": { "name": "model" },
+      "1": { "name": "sampler" },
+      "2": { "name": "sigmas" },
+      "3": { "name": "report" }
+    }
+  }
+}

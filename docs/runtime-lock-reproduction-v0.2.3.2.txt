@@ -1,0 +1,22 @@
+Captured from unmodified V0.2.3.1 with mock input; not recovered from ComfyUI server logs.
+
+Traceback (most recent call last):
+  File "D:\PY\HuTX-MiniMax-H3-Studio\prompt_optimizer\legacy.py", line 1700, in _run_prompt_optimization
+    return await optimize_payload(config, payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PY\HuTX-MiniMax-H3-Studio\prompt_optimizer\engine.py", line 31, in optimize_payload
+    request_payload = protect_cloud_payload_bindings(request_payload, protection)
+  File "D:\PY\HuTX-MiniMax-H3-Studio\prompt_optimizer\template_manager.py", line 178, in protect_cloud_payload_bindings
+    result = copy.deepcopy(dict(payload))
+  File "copy.py", line 137, in deepcopy
+  File "copy.py", line 222, in _deepcopy_dict
+  File "copy.py", line 163, in deepcopy
+  File "copy.py", line 260, in _reconstruct
+  File "copy.py", line 137, in deepcopy
+  File "copy.py", line 222, in _deepcopy_dict
+  File "copy.py", line 163, in deepcopy
+  File "copy.py", line 260, in _reconstruct
+  File "copy.py", line 137, in deepcopy
+  File "copy.py", line 222, in _deepcopy_dict
+  File "copy.py", line 152, in deepcopy
+TypeError: cannot pickle '_thread.lock' object

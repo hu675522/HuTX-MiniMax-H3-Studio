@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/FunAudioLLM/CosyVoice.git",
+  "commit": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+  "matcha_commit": "dd9105b34bf2be2230f4aa1e4769fb586a3c824e",
+  "model": "FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+  "model_revision": "29e01c4e8d000f4bcd70751be16fa94bf3d85a18",
+  "license": "Apache-2.0",
+  "python": "3.10",
+  "torch": "2.3.1+cu121",
+  "torchaudio": "2.3.1+cu121"
+}

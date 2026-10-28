@@ -1,0 +1,202 @@
+{
+  "GHLocalVideoInputDualEngineGH": {
+    "display_name": "HuTX · H3 双引擎视频输入 · Fused / HyperFlow",
+    "inputs": {
+      "engine_mode": { "name": "生成引擎", "options": { "fused_turbo": "Fused Turbo 4-Step", "hyperflow": "HyperFlow 8-Step" } },
+      "fused_model_name": { "name": "Fused 主模型" },
+      "hyperflow_base_model": { "name": "HyperFlow Base" },
+      "hyperflow_weights": { "name": "HyperFlow 权重" },
+      "driver_audio": { "name": "口播驱动音频" },
+      "continuation_latent": { "name": "续写潜空间（预留）" },
+      "continuation_frames": { "name": "续写尾帧（预留）" },
+      "continuation_audio": { "name": "续写尾音频（预留）" }
+    }
+  },
+  "GHLocalVideoDualEngineOutputGH": {
+    "display_name": "HuTX · H3 双引擎输出"
+  },
+  "HuTXH3PreserveFirstPassAudioGH": {
+    "display_name": "HuTX · 二采保留首采音频",
+    "inputs": {
+      "first_pass_latent": { "name": "首采 AV latent" },
+      "selected_pass_latent": { "name": "所选画面 AV latent" }
+    },
+    "outputs": { "0": { "name": "AV latent" } }
+  },
+  "GHLocalVideoInputGH": {
+  "display_name": "HuTX · 本地视频输入 · 5合1",
+  "inputs": {
+    "model_name": {
+      "name": "主模型"
+    },
+    "clip_name": {
+      "name": "CLIP 模型"
+    },
+    "video_vae_name": {
+      "name": "视频 VAE"
+    },
+    "audio_vae_name": {
+      "name": "音频 VAE"
+    },
+    "aspect": {
+      "name": "宽高比例"
+    },
+    "megapixels": {
+      "name": "百万像素"
+    },
+    "duration_seconds": {
+      "name": "时长（秒）"
+    },
+    "prompt": {
+      "name": "提示词"
+    },
+    "main_mode": {
+      "name": "模式",
+      "options": {
+        "text_keyframes": "文本 / 首尾帧",
+        "all_reference": "全能参考"
+      }
+    }
+  }
+},
+  "MiniMaxH3IntegrationGH": {
+    "display_name": "HuTX · MiniMax H3 本地 Studio",
+    "inputs": {
+      "clip_name": { "name": "CLIP模型" },
+      "video_vae_name": { "name": "视频 VAE" },
+      "audio_vae_name": { "name": "音频 VAE" },
+      "aspect": {
+        "name": "宽高比例",
+        "options": {
+          "adaptive": "自适应",
+          "16:9": "16:9",
+          "9:16": "9:16",
+          "3:2": "3:2",
+          "2:3": "2:3",
+          "4:3": "4:3",
+          "3:4": "3:4",
+          "1:1": "1:1",
+          "21:9": "21:9"
+        }
+      },
+      "megapixels": { "name": "百万像素" },
+      "prompt_override": { "name": "提示词" },
+      "duration_seconds": { "name": "时长（秒）" }
+    },
+    "outputs": { "0": { "name": ">" } }
+  },
+  "MiniMaxH3IntegrationAdapterGH": {
+    "display_name": "HuTX · MiniMax H3 适配器",
+    "inputs": { "integration": { "name": "<" } },
+    "outputs": {
+      "0": { "name": "正面条件" },
+      "1": { "name": "音视频潜空间" },
+      "2": { "name": "视频 VAE" },
+      "3": { "name": "音频 VAE" },
+      "4": { "name": "模型序号" },
+      "5": { "name": "原始音频" },
+      "6": { "name": "是否原声" },
+      "7": { "name": "条件提示词" },
+      "8": { "name": "媒体映射 JSON" },
+      "9": { "name": "报告" }
+    }
+  },
+  "MiniMaxH3DualClockT8GH": {
+    "display_name": "HuTX · MiniMax H3 双时钟 T8",
+    "inputs": {
+      "model": { "name": "模型" },
+      "av_latent": { "name": "音视频潜空间" },
+      "steps": { "name": "步数" },
+      "shift_video": { "name": "视频偏移" },
+      "shift_audio": { "name": "音频偏移" },
+      "sampler_name": { "name": "采样器" },
+      "scheduler": { "name": "调度器" }
+    },
+    "outputs": {
+      "0": { "name": "模型" },
+      "1": { "name": "采样器" },
+      "2": { "name": "Sigmas" }
+    }
+  },
+  "MiniMaxH3AVDecodeT8GH": {
+    "display_name": "HuTX · MiniMax H3 解码 T8",
+    "inputs": {
+      "av_latent": { "name": "音视频潜空间" },
+      "video_vae": { "name": "视频 VAE" },
+      "audio_vae": { "name": "音频 VAE" }
+    },
+    "outputs": {
+      "0": { "name": "图像" },
+      "1": { "name": "生成音频" },
+      "2": { "name": "视频潜空间" },
+      "3": { "name": "音频潜空间" }
+    }
+  },
+  "GHCloudVideoInputGH": {
+    "display_name": "HuTX 云端视频输入 · 5合1",
+    "inputs": {
+      "main_mode": { "name": "主模式" },
+      "prompt": { "name": "提示词" },
+      "aspect": { "name": "宽高比例" },
+      "duration_seconds": { "name": "时长（秒）" },
+      "optimizer_enabled": { "name": "启用提示词优化" }
+    },
+    "outputs": {
+      "0": { "name": "HuTX 视频请求" },
+      "1": { "name": "优化后提示词" },
+      "2": { "name": "优化器报告" }
+    }
+  },
+  "FalH3MaxVideoGH": {
+    "display_name": "HuTX · MiniMax H3 Max / Turbo",
+    "inputs": {
+      "integration": { "name": "请求 / 兼容输入" },
+      "model_variant": { "name": "模型" },
+      "execution_mode": { "name": "执行模式" },
+      "resolution": { "name": "分辨率" },
+      "prompt_expansion_mode": { "name": "提示词扩展" },
+      "seed": { "name": "种子" },
+      "enable_safety_checker": { "name": "启用安全检查" },
+      "max_estimated_cost": { "name": "最高预估成本 (USD)" }
+    },
+    "outputs": {
+      "0": { "name": "视频" },
+      "1": { "name": "视频 URL" },
+      "2": { "name": "请求 ID" },
+      "3": { "name": "端点" },
+      "4": { "name": "报告" },
+      "5": { "name": "服务端扩写提示词" }
+    }
+  },
+  "HuTXH3HyperFlowCompatibility": {
+    "display_name": "HuTX · H3 HyperFlow · 兼容性检查",
+    "inputs": { "model": { "name": "模型" } },
+    "outputs": { "0": { "name": "检查报告" } }
+  },
+  "HuTXH3HyperFlowPatch": {
+    "display_name": "HuTX · H3 HyperFlow · 8步 LoRA Patch",
+    "inputs": {
+      "model": { "name": "模型" },
+      "hyperflow_weights": { "name": "HyperFlow 权重" },
+      "strength": { "name": "强度" },
+      "strict_architecture": { "name": "严格架构检查" }
+    },
+    "outputs": {
+      "0": { "name": "模型" },
+      "1": { "name": "报告" }
+    }
+  },
+  "HuTXH3HyperFlowSampler": {
+    "display_name": "HuTX · H3 HyperFlow · 8步双时钟",
+    "inputs": {
+      "model": { "name": "模型" },
+      "av_latent": { "name": "音视频潜空间" }
+    },
+    "outputs": {
+      "0": { "name": "模型" },
+      "1": { "name": "采样器" },
+      "2": { "name": "Sigmas" },
+      "3": { "name": "报告" }
+    }
+  }
+}

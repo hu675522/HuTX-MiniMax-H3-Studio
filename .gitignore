@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.test-deps/
+.test-tmp*/
+.test-artifacts/
+.speech-runtime/
+.local-smoke-*/
+dist/
+*.log
+HuTX-CosyVoice-Runtime.zip

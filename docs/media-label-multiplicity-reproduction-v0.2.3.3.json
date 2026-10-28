@@ -1,0 +1,37 @@
+{
+  "source": "Controlled mock of the unmodified V0.2.3.2 engine; real provider response was not saved in server logs.",
+  "raw_protected_prompt": "Use __GH_MEDIA_V1_PICTURE_1_8A5D1C413A6F__ as the main character identity reference.\nUse __GH_MEDIA_V1_PICTURE_2_C869C1566E43__ as the clothing and appearance styling reference.\nFollow the movement and shot rhythm of __GH_MEDIA_V1_VIDEO_1_19AB970ED17C__.\nMatch the pacing and emotional tone of __GH_MEDIA_V1_AUDIO_1_51B04EFA8A21__.\nCreate a smooth, cinematic 5-second video with coherent motion and natural continuity.",
+  "protected_prompt_counts": {
+    "<Picture 1>": 1,
+    "<Picture 2>": 1,
+    "<Video 1>": 1,
+    "<Audio 1>": 1
+  },
+  "mock_llm_raw_response": "Use __GH_MEDIA_V1_PICTURE_1_8A5D1C413A6F__ as the main character identity reference.\nUse __GH_MEDIA_V1_PICTURE_2_C869C1566E43__ as the clothing and appearance styling reference.\nFollow the movement and shot rhythm of __GH_MEDIA_V1_VIDEO_1_19AB970ED17C__.\nMatch the pacing and emotional tone of __GH_MEDIA_V1_AUDIO_1_51B04EFA8A21__.\nCreate a smooth, cinematic 5-second video with coherent motion and natural continuity.\nKeep the face consistent with __GH_MEDIA_V1_PICTURE_1_8A5D1C413A6F__.\nPreserve the shot rhythm of __GH_MEDIA_V1_VIDEO_1_19AB970ED17C__.",
+  "llm_response_placeholder_counts": {
+    "<Picture 1>": 2,
+    "<Picture 2>": 1,
+    "<Video 1>": 2,
+    "<Audio 1>": 1
+  },
+  "before_restore_placeholder_counts": {
+    "<Picture 1>": 2,
+    "<Picture 2>": 1,
+    "<Video 1>": 2,
+    "<Audio 1>": 1
+  },
+  "diagnostic_substitution_label_counts": {
+    "<Picture 1>": 2,
+    "<Picture 2>": 1,
+    "<Video 1>": 2,
+    "<Audio 1>": 1
+  },
+  "old_validator_error": "Optimizer damaged protected media label <Picture 1>: expected 1, found 2.",
+  "new_validator_restored_prompt": "Use <Picture 1> as the main character identity reference.\nUse <Picture 2> as the clothing and appearance styling reference.\nFollow the movement and shot rhythm of <Video 1>.\nMatch the pacing and emotional tone of <Audio 1>.\nCreate a smooth, cinematic 5-second video with coherent motion and natural continuity.\nKeep the face consistent with <Picture 1>.\nPreserve the shot rhythm of <Video 1>.",
+  "new_validator_restored_label_counts": {
+    "<Picture 1>": 2,
+    "<Picture 2>": 1,
+    "<Video 1>": 2,
+    "<Audio 1>": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "source": "User-supplied Raw.txt, Concise.txt, Structured.txt from 比较H3 Max厂商性价比 audit",
+  "task": "i2v",
+  "model_variant": "H3 Max Turbo",
+  "scores_are_subjective_design_evidence_only": true,
+  "structured_frontend_elapsed_seconds_approx": 11.18,
+  "structured_fal_node_seconds_approx": 9.24,
+  "server_prompt_expansion_mode": "balanced",
+  "prompts": {
+    "raw": {
+      "text": "<Picture 1> slowly turns toward the camera and walks forward.\nPreserve her identity, clothing and background.",
+      "subjective_score": 84
+    },
+    "concise": {
+      "text": "Starting from <Picture 1>, the woman slowly turns her head to face the camera and takes two natural steps forward. Preserve her facial identity, hairstyle and ornaments, Hanfu clothing, body proportions, pavilion background, and warm lighting. Her hair and loose sleeves move gently in the breeze. Smooth subtle camera push-in, natural coherent motion, stable composition, no scene change.",
+      "subjective_score": 93
+    },
+    "structured": {
+      "text": "integrated_multimodal_description\n[Shot 1] 0.00s-5.00s：画面起始于 <Picture 1> 所展示的静态帧，一位身着淡紫色汉服的女子（S1）侧身立于古风庭院的木门前，发髻上点缀着粉色花饰，衣袖轻垂，姿态娴静。她缓缓地将身体转向镜头方向，目光柔和地望向相机，同时右脚向前迈步，开始向镜头方向行走。她的动作舒缓而优雅，裙摆随步伐轻轻摇曳，衣料在阳光下泛出柔光。背景中的青石小径、盆栽绿植与雕花窗棂保持不变，环境细节完整保留。随着她前进，镜头以缓慢的推镜方式跟随其移动，保持中景构图，突出人物主体与服饰细节。整个过程持续至5.00秒结束，人物最终接近镜头中心位置，但未完全填满画面，仍留有空间感。\n\noverall_soundscape\n轻柔的风声拂过庭院，伴随细微的树叶沙沙作响；远处传来若有若无的鸟鸣，营造出宁静悠远的氛围。脚步轻踏青石地面，发出轻微而清晰的“嗒、嗒”声，节奏平稳，与人物行走速度同步。背景中隐约可闻低沉的古琴余音，似断非断，增强古典意境。\n\nnon_diegetic_music\n一段舒缓的古筝独奏作为背景音乐，旋律婉转悠扬，以五声音阶为主，节奏缓慢，配合人物前行的动作逐渐推进。音乐从弱起始，随人物靠近镜头而略微增强，尾声处渐弱收束，整体风格契合古典美学意境。",
+      "subjective_score": 93
+    }
+  }
+}

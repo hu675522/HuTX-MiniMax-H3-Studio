@@ -1,0 +1,249 @@
+{
+  "last_node_id": 20,
+  "last_link_id": 100,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "MiniMaxH3IntegrationGH",
+      "pos": [100, 100],
+      "size": [420, 620],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "integration",
+          "type": "MiniMax",
+          "links": [100],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3IntegrationGH",
+        "gh_h3_state": "{\"mainMode\":\"text_keyframes\"}"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 20,
+      "type": "FalH3MaxVideoGH",
+      "pos": [620, 100],
+      "size": [330, 270],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "integration",
+          "type": "MiniMax",
+          "link": 100
+        }
+      ],
+      "outputs": [
+        { "name": "video", "type": "VIDEO", "links": null, "slot_index": 0 },
+        { "name": "video_url", "type": "STRING", "links": null, "slot_index": 1 },
+        { "name": "request_id", "type": "STRING", "links": null, "slot_index": 2 },
+        { "name": "endpoint", "type": "STRING", "links": null, "slot_index": 3 },
+        { "name": "report", "type": "STRING", "links": null, "slot_index": 4 },
+        { "name": "expanded_prompt", "type": "STRING", "links": null, "slot_index": 5 }
+      ],
+      "properties": { "Node name for S&R": "FalH3MaxVideoGH" },
+      "widgets_values": ["dry_run", "480P", "balanced", -1, true, 2.0]
+    }
+  ],
+  "links": [[100, 10, 0, 20, 0, "MiniMax"]],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": { "scale": 1.0, "offset": [0, 0] },
+    "fixture_note": "Sanitized V0.1.3.1 Legacy MiniMax-to-Fal workflow contract fixture.",
+    "compatibility_cases": {
+      "t2v": {
+        "manifest": {
+          "schema_version": 1,
+          "input_prompt": "raw T2V",
+          "conditioned_prompt": "conditioned T2V",
+          "main_mode": "text_keyframes",
+          "resolved_task": "t2va",
+          "aspect": "adaptive",
+          "target": {
+            "width": 1280,
+            "height": 736,
+            "requested_duration_seconds": 5.0,
+            "local_frame_count": 124,
+            "local_duration_seconds": 5.166666666666667
+          },
+          "first_frame": null,
+          "last_frame": null,
+          "reference_images": [],
+          "reference_videos": [],
+          "reference_audios": [],
+          "hybrid_audio": null
+        },
+        "expected_endpoint": "minimax/h3-max/text-to-video",
+        "expected_payload": {
+          "prompt": "conditioned T2V",
+          "duration": 5,
+          "resolution": "480P",
+          "prompt_expansion_mode": "balanced",
+          "enable_safety_checker": true,
+          "sync_mode": false,
+          "aspect_ratio": "16:9"
+        },
+        "expected_output_cost": 0.0625
+      },
+      "i2v": {
+        "manifest": {
+          "schema_version": 1,
+          "input_prompt": "raw I2V",
+          "conditioned_prompt": "Animate <Picture 1> with a slow camera push.",
+          "main_mode": "text_keyframes",
+          "resolved_task": "i2va",
+          "aspect": "adaptive",
+          "target": {
+            "width": 736,
+            "height": 1280,
+            "requested_duration_seconds": 5.0,
+            "local_frame_count": 124,
+            "local_duration_seconds": 5.166666666666667
+          },
+          "first_frame": { "slot": "first_frame", "name": "legacy/first.png" },
+          "last_frame": null,
+          "reference_images": [],
+          "reference_videos": [],
+          "reference_audios": [],
+          "hybrid_audio": null
+        },
+        "expected_endpoint": "minimax/h3-max/image-to-video",
+        "expected_payload": {
+          "prompt": "Animate the first frame with a slow camera push.",
+          "duration": 5,
+          "resolution": "480P",
+          "prompt_expansion_mode": "balanced",
+          "enable_safety_checker": true,
+          "sync_mode": false,
+          "image_url": "fal-upload://input/legacy/first.png"
+        },
+        "expected_output_cost": 0.0625
+      },
+      "fl2v": {
+        "manifest": {
+          "schema_version": 1,
+          "input_prompt": "raw FL2V",
+          "conditioned_prompt": "Move from <Picture 1> to <Picture 2>.",
+          "main_mode": "text_keyframes",
+          "resolved_task": "fl2va",
+          "aspect": "16:9",
+          "target": {
+            "width": 1280,
+            "height": 720,
+            "requested_duration_seconds": 5.0,
+            "local_frame_count": 124,
+            "local_duration_seconds": 5.166666666666667
+          },
+          "first_frame": { "slot": "first_frame", "name": "legacy/first.png" },
+          "last_frame": { "slot": "last_frame", "name": "legacy/last.png" },
+          "reference_images": [],
+          "reference_videos": [],
+          "reference_audios": [],
+          "hybrid_audio": null
+        },
+        "expected_endpoint": "minimax/h3-max/image-to-video",
+        "expected_payload": {
+          "prompt": "Move from the first frame to the last frame.",
+          "duration": 5,
+          "resolution": "480P",
+          "prompt_expansion_mode": "balanced",
+          "enable_safety_checker": true,
+          "sync_mode": false,
+          "image_url": "fal-upload://input/legacy/first.png",
+          "end_image_url": "fal-upload://input/legacy/last.png"
+        },
+        "expected_output_cost": 0.0625
+      },
+      "ref2v": {
+        "manifest": {
+          "schema_version": 1,
+          "input_prompt": "raw Ref2V",
+          "conditioned_prompt": "Blend <Picture 1> with <Picture 3>, follow <Video 2>, and match <Audio 1>.",
+          "main_mode": "all_reference",
+          "resolved_task": "ref2va",
+          "aspect": "adaptive",
+          "target": {
+            "width": 1024,
+            "height": 576,
+            "requested_duration_seconds": 5.0,
+            "local_frame_count": 124,
+            "local_duration_seconds": 5.166666666666667
+          },
+          "first_frame": null,
+          "last_frame": null,
+          "reference_images": [
+            { "slot": "ref_image_1", "name": "legacy/ref-one.png" },
+            { "slot": "ref_image_3", "name": "legacy/ref-three.png" }
+          ],
+          "reference_videos": [
+            {
+              "slot": "ref_video_2",
+              "name": "legacy/motion.mp4",
+              "muted": true,
+              "has_audio": false
+            }
+          ],
+          "reference_audios": [
+            {
+              "slot": "ref_audio_1",
+              "name": "legacy/voice.wav",
+              "trim_start": 0.0,
+              "trim_end": null
+            }
+          ],
+          "hybrid_audio": null
+        },
+        "expected_endpoint": "minimax/h3-max/reference-to-video",
+        "expected_payload": {
+          "prompt": "Blend Image 1 with Image 2, follow Video 1, and match Audio 1.",
+          "duration": 5,
+          "resolution": "480P",
+          "prompt_expansion_mode": "balanced",
+          "enable_safety_checker": true,
+          "sync_mode": false,
+          "aspect_ratio": "adaptive",
+          "reference_image_urls": [
+            "fal-upload://input/legacy/ref-one.png",
+            "fal-upload://input/legacy/ref-three.png"
+          ],
+          "reference_video_urls": ["fal-upload://input/legacy/motion.mp4"],
+          "reference_audio_urls": ["fal-upload://input/legacy/voice.wav"]
+        },
+        "expected_output_cost": 0.25
+      },
+      "l2v": {
+        "manifest": {
+          "schema_version": 1,
+          "input_prompt": "raw L2V",
+          "conditioned_prompt": "End at <Picture 1>.",
+          "main_mode": "text_keyframes",
+          "resolved_task": "l2va",
+          "aspect": "adaptive",
+          "target": {
+            "width": 1280,
+            "height": 736,
+            "requested_duration_seconds": 5.0,
+            "local_frame_count": 124,
+            "local_duration_seconds": 5.166666666666667
+          },
+          "first_frame": null,
+          "last_frame": { "slot": "last_frame", "name": "legacy/last.png" },
+          "reference_images": [],
+          "reference_videos": [],
+          "reference_audios": [],
+          "hybrid_audio": null
+        },
+        "expected_error": "MiniMax H3 Max 当前未实现 Last-Frame-only 路由。\n请使用本地 H3 或其他明确支持 L2V 的模型。"
+      }
+    }
+  },
+  "version": 0.4
+}

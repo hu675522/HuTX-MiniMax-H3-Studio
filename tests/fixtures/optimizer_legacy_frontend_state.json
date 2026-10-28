@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "mode": "text_keyframes",
+  "prompt": "A paper boat sails.",
+  "aspect": "16:9",
+  "duration_seconds": 5,
+  "media": [],
+  "optimizer": {
+    "config": {
+      "mode": "api",
+      "provider": "dashscope",
+      "api_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model": "qwen-vl-max",
+      "provider_models": {},
+      "protocol": "openai",
+      "read_media": true,
+      "output_language": "中文",
+      "local_model": "",
+      "local_mmproj": "",
+      "local_device": "cuda",
+      "max_tokens": 4096,
+      "auto_optimize": false,
+      "environment_api_key_providers": [],
+      "runninghub_models": [
+        "qwen-plus"
+      ],
+      "runninghub_overseas_models": [
+        "qwen-vl-max"
+      ],
+      "models": [
+        {
+          "name": "Example-VL.gguf",
+          "path": "D:/REDACTED/models/llm/Example-VL.gguf",
+          "relative_path": "Example-VL.gguf",
+          "format": "gguf",
+          "mmproj_candidates": [
+            "mmproj.gguf"
+          ]
+        }
+      ],
+      "mmproj_models": [
+        {
+          "name": "mmproj.gguf",
+          "path": "D:/REDACTED/models/llm/mmproj.gguf",
+          "relative_path": "mmproj.gguf"
+        }
+      ],
+      "missing_dependencies": [
+        "accelerate"
+      ],
+      "gguf_dependency": {
+        "available": false,
+        "reason": "offline fixture",
+        "system": "Windows",
+        "machine": "AMD64",
+        "python_tag": "cp312",
+        "cuda_tag": "",
+        "release_url": "https://example.invalid/releases",
+        "wheel_url": "",
+        "wheel_name": ""
+      }
+    },
+    "optimized_prompt": "",
+    "optimizer_report": "",
+    "original_prompt": ""
+  }
+}
