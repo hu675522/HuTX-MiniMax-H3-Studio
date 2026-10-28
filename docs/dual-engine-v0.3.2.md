@@ -32,4 +32,4 @@ HyperFlow 分支不会创建 Fused loader，也不会创建 SLA 或 Fused DualCl
 
 ## 示例
 
-[`dual-engine-hyperflow-ref2va-api.json`](workflows/dual-engine-hyperflow-ref2va-api.json) 是可直接导入 API prompt 的透明 HyperFlow 主链。将占位参考图片放入 ComfyUI `input`，并按本机模型文件名调整四个模型字段后执行。示例显式保留 RandomNoise、BasicGuider、SamplerCustomAdvanced、AV Decode、CreateVideo 和 SaveVideo。
+示例工作流统一放在 [`workflows/`](workflows/) 目录。导入后把占位参考图片放入 ComfyUI `input`，并按本机模型文件名调整模型字段；示例保留 RandomNoise、BasicGuider、SamplerCustomAdvanced、AV Decode、CreateVideo 和 SaveVideo，采样与解码保持外置。

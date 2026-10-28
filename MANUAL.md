@@ -40,11 +40,13 @@
 # 1. 复制到 custom_nodes（目录名必须为 HuTX-MiniMax-H3-Studio）
 #    D:\ComfyUI\custom_nodes\HuTX-MiniMax-H3-Studio
 
-# 2. 安装依赖（使用 ComfyUI 自带的 Python）
-..\..\python_embeded\python.exe -m pip install -r requirements.txt
+# 2. 安装依赖（使用 ComfyUI 自带的 Python，在插件目录执行）
+..\..\..\python_embeded\python.exe -m pip install -r requirements.txt
 
 # 3. 重启 ComfyUI，然后 Ctrl+F5 强制刷新浏览器
 ```
+
+> 秋叶整合包等便携版把 `python_embeded` 换成 `python`：`..\..\..\python\python.exe`。
 
 > 不要同时保留旧目录（如 `Goohai-MiniMax-H3_Integration`），否则节点会重复注册。
 
@@ -131,7 +133,7 @@ HuTX · H3 双引擎视频输入 · Fused / HyperFlow
 - `engine_mode = hyperflow`：基础模型 + HyperFlow LoRA Patch + 8 步 Dual Clock，自动关闭 SLA 与二采；
 - 切换引擎会同步切换主链上标题含「二采」「VOSR2」的开关，不会改接线。
 
-可导入的 API 示例见 [双引擎 HyperFlow 示例](docs/workflows/dual-engine-hyperflow-ref2va-api.json)。
+可导入的示例统一放在 [docs/workflows](docs/workflows/) 目录。
 
 ---
 

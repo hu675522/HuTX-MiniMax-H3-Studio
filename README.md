@@ -82,19 +82,20 @@ HuTX 总台从 ComfyUI 侧栏进入，三个页面共用同一个存活的节点
 
 ## 快速开始
 
-### 1. 放到 ComfyUI/custom_nodes/ 下，目录名必须是 HuTX-MiniMax-H3-Studio
-###    不要同时保留旧目录，否则节点会重复注册
-
-### 2. 安装依赖
-..\..\python_embeded\python.exe -m pip install -r requirements.txt
-
-### 3. 准备模型（见下表），重启 ComfyUI
-
-### 4. 浏览器 Ctrl+F5 强制刷新
-
-### 5. 可选：安装本地语音运行时
-一键安装本地语音环境.cmd
-
+1. **放入插件目录**
+   把整个文件夹放到 `ComfyUI/custom_nodes/HuTX-MiniMax-H3-Studio`。目录名不要改；也不要同时保留旧版本目录，否则节点会重复注册。
+2. **安装依赖**
+   在插件目录执行：
+   ```powershell
+   ..\..\..\python_embeded\python.exe -m pip install -r requirements.txt
+   ```
+   秋叶整合包等便携版改用 `..\..\..\python\python.exe`。
+3. **准备模型**
+   按下表把模型放进 `ComfyUI/models/`，插件不会自动下载。
+4. **重启并刷新**
+   重启 ComfyUI，然后在浏览器按 `Ctrl+F5` 强制刷新。
+5. **可选：本地语音**
+   双击插件目录下的 `一键安装本地语音环境.cmd`。
 
 ### 模型目录
 
@@ -224,8 +225,8 @@ python tools/package_plugin_code.py
 模型、API 与音色资源的使用受各自官方条款约束；Fal云端调用会产生费用，请自行确认额度与授权。
 
 ## 作者
-- 微信：hutongxue168
-- 爱发电：[胡同学_168](https://afdian.com/a/hutongxue168?tab=home)
+
+- GitHub：[hu675522](https://github.com/hu675522)
 - B 站：[胡同学_168](https://space.bilibili.com/3707008517671681)
 - Youtube：[胡同学_168](https://www.youtube.com/@%E8%83%A1%E5%90%8C%E5%AD%A6_168)
 
