@@ -1,0 +1,385 @@
+{
+  "id": "2a3a14bd-008d-4aaf-a2fc-cae770870f67",
+  "revision": 0,
+  "last_node_id": 23,
+  "last_link_id": 12,
+  "nodes": [
+    {
+      "id": 19,
+      "type": "PreviewAny",
+      "pos": [
+        -513.2841739793504,
+        360.16123087663357
+      ],
+      "size": [
+        306.5131480090158,
+        633.2945154019533
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 21,
+      "type": "PreviewAny",
+      "pos": [
+        -191.3757039793502,
+        359.7843808766332
+      ],
+      "size": [
+        331.7700000000002,
+        635.81
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 17,
+      "type": "FalH3MaxVideoGH",
+      "pos": [
+        -983.3614983190786,
+        318.3298571585637
+      ],
+      "size": [
+        436.7058666064048,
+        670
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "integration",
+          "type": "MiniMax,GHVideoRequest",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "video_url",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "request_id",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "endpoint",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "report",
+          "type": "STRING",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "expanded_prompt",
+          "type": "STRING",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FalH3MaxVideoGH"
+      },
+      "widgets_values": [
+        "H3 Max",
+        "dry_run",
+        "480P",
+        "balanced",
+        881829578,
+        "fixed",
+        true,
+        0.1
+      ],
+      "widgets_values_named": {
+        "model_variant": "H3 Max",
+        "execution_mode": "dry_run",
+        "resolution": "480P",
+        "prompt_expansion_mode": "balanced",
+        "seed": 881829578,
+        "control_after_generate": "fixed",
+        "enable_safety_checker": true,
+        "max_estimated_cost": 0.1
+      }
+    },
+    {
+      "id": 23,
+      "type": "PreviewAny",
+      "pos": [
+        -1599.908929046432,
+        398.3475806926454
+      ],
+      "size": [
+        218,
+        631
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 22,
+      "type": "PreviewAny",
+      "pos": [
+        -1354.2229024625824,
+        401.6729811502079
+      ],
+      "size": [
+        237,
+        636
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 16,
+      "type": "GHCloudVideoInputGH",
+      "pos": [
+        -2223.9859969998965,
+        259.0750119512923
+      ],
+      "size": [
+        594.0436761745453,
+        1689.049871411743
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "request",
+          "type": "GHVideoRequest",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "optimized_prompt",
+          "type": "STRING",
+          "links": [
+            11
+          ]
+        },
+        {
+          "name": "optimizer_report",
+          "type": "STRING",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GHCloudVideoInputGH",
+        "gh_cloud_video_state": "{\"schema_version\":1,\"mode\":\"all_reference\",\"prompt\":\"\",\"aspect\":\"adaptive\",\"duration_seconds\":5,\"media\":[],\"optimizer\":{\"optimizer_state_version\":2,\"config\":{\"mode\":\"api\",\"provider\":\"dashscope\",\"api_url\":\"https://dashscope.aliyuncs.com/compatible-mode/v1\",\"protocol\":\"openai\",\"model\":\"qwen-vl-max\",\"max_tokens\":4096,\"output_language\":\"中文\",\"read_media\":true,\"auto_optimize\":false,\"prompt_profile\":\"concise\"},\"optimized_prompt\":\"subject_definitions:\\n<Subject 1> 是来自 <Picture 1> 的男性，身穿白色衬衫和黑色西裤，站立姿态端正，发型整齐，面部表情沉稳。\\n<Subject 2> 是来自 <Picture 2> 的四位女性，分别穿着黑色、米色、浅粉色和带有花卉图案的旗袍，长发披肩，姿态优雅，具有东方古典美感。\\n<Subject 3> 是来自 <Video 1> 的主角，身着红色紧身服装，动作夸张且富有表现力，在舞台中央进行舞蹈表演，背景为城市夜景或抽象布景。\\n\\nsummary:\\n[reference generation, video continuation, audio reference]\\n\\nretention_analysis:\\n<Picture 1>: partially_preserved - 主体身份与基本外观（白衬衫黑西裤）保留，但动作从静态变为动态舞蹈，模仿视频中主角的舞步；\\n<Picture 2>: attribute_transfer - 四位女性的外貌特征与服饰被完整保留并转化为伴舞角色，其姿态与动作根据主舞节奏同步调整；\\n<Video 1>: attribute_transfer - 视频中的舞蹈动作、编排结构、舞台氛围及镜头运动风格被迁移至新场景，由 <Subject 1> 模仿执行；\\n<Audio 1>: reference - 音频仅作为节奏与情绪参考，不直接复制，用于驱动舞蹈节拍与整体节奏感。\\n\\ndetailed_description:\\n[Shot 1]\\n画面初始为一个中景固定镜头，<Subject 1> 站立于舞台中央，背景为模拟城市夜景的投影幕布，灯光柔和偏暗，营造出戏剧性氛围。随着音乐起始，<Subject 1> 开始模仿 <Video 1> 中主角的标志性舞步——双臂展开，身体前倾，脚步轻快地左右移动，同时头部随节奏轻微摆动。\\n在第1.5秒时，镜头缓慢推进至近景，突出 <Subject 1> 的面部表情变化：嘴角微扬，眼神专注，展现出投入的表演状态。此时，四位 <Subject 2> 从舞台两侧缓缓步入画面，她们身着各自旗袍，步伐轻盈，以统一的节奏跟随主舞动作，形成对称式队形排列。\\n第3秒，音乐进入高潮段落，<Subject 1> 跳跃并旋转，手臂高举，完成一次大幅度的转身动作；与此同时，四位 <Subject 2> 分别做出呼应手势：双手上扬、侧身扭动、抬腿摆臂等，动作协调但不失个性。\\n第4秒，镜头拉远至全景，展现完整的舞台布局：<Subject 1> 居中，四名伴舞呈扇形分布，背景城市灯光闪烁，地面投射出斑驳光影。\\n第5秒，所有人物定格于最后一个舞蹈姿势：<Subject 1> 双手张开，身体微弓，目光直视前方；四位 <Subject 2> 则保持各自优雅造型，其中一人抬起右手致意。整个画面充满张力与视觉冲击力，结束于一个极具仪式感的瞬间。\\n\\noverall_soundscape:\\n背景音效包含原音频 <Audio 1> 提供的节奏性鼓点与电子合成音色，配合环境低频震动感，增强舞蹈的律动感。舞台空间中加入轻微回声效果，使声音更具沉浸感。无额外对话或旁白，仅以音乐驱动全场氛围。\\n\\nnon_diegetic_music:\\n使用 <Audio 1> 作为非叙事性配乐，维持原始节奏与情绪走向，强化舞蹈动作的同步性与情感表达。音乐风格偏向现代电子融合传统元素，适合表现跨界艺术表演的主题。\",\"optimizer_report\":\"\",\"original_prompt\":\"<Picture 1>模仿 <Video 1> 视频中得主角跳舞，伴舞为<Picture 2>中的4个人，背景音乐为<Audio 1>\"}}"
+      },
+      "widgets_values": [
+        "all_reference",
+        "",
+        "adaptive",
+        5,
+        false,
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "{\"schema_version\":1,\"mode\":\"all_reference\",\"prompt\":\"\",\"aspect\":\"adaptive\",\"duration_seconds\":5,\"media\":[],\"optimizer\":{\"optimizer_state_version\":2,\"config\":{\"mode\":\"api\",\"provider\":\"dashscope\",\"api_url\":\"https://dashscope.aliyuncs.com/compatible-mode/v1\",\"protocol\":\"openai\",\"model\":\"qwen-vl-max\",\"max_tokens\":4096,\"output_language\":\"中文\",\"read_media\":true,\"auto_optimize\":false,\"prompt_profile\":\"concise\"},\"optimized_prompt\":\"subject_definitions:\\n<Subject 1> 是来自 <Picture 1> 的男性，身穿白色衬衫和黑色西裤，站立姿态端正，发型整齐，面部表情沉稳。\\n<Subject 2> 是来自 <Picture 2> 的四位女性，分别穿着黑色、米色、浅粉色和带有花卉图案的旗袍，长发披肩，姿态优雅，具有东方古典美感。\\n<Subject 3> 是来自 <Video 1> 的主角，身着红色紧身服装，动作夸张且富有表现力，在舞台中央进行舞蹈表演，背景为城市夜景或抽象布景。\\n\\nsummary:\\n[reference generation, video continuation, audio reference]\\n\\nretention_analysis:\\n<Picture 1>: partially_preserved - 主体身份与基本外观（白衬衫黑西裤）保留，但动作从静态变为动态舞蹈，模仿视频中主角的舞步；\\n<Picture 2>: attribute_transfer - 四位女性的外貌特征与服饰被完整保留并转化为伴舞角色，其姿态与动作根据主舞节奏同步调整；\\n<Video 1>: attribute_transfer - 视频中的舞蹈动作、编排结构、舞台氛围及镜头运动风格被迁移至新场景，由 <Subject 1> 模仿执行；\\n<Audio 1>: reference - 音频仅作为节奏与情绪参考，不直接复制，用于驱动舞蹈节拍与整体节奏感。\\n\\ndetailed_description:\\n[Shot 1]\\n画面初始为一个中景固定镜头，<Subject 1> 站立于舞台中央，背景为模拟城市夜景的投影幕布，灯光柔和偏暗，营造出戏剧性氛围。随着音乐起始，<Subject 1> 开始模仿 <Video 1> 中主角的标志性舞步——双臂展开，身体前倾，脚步轻快地左右移动，同时头部随节奏轻微摆动。\\n在第1.5秒时，镜头缓慢推进至近景，突出 <Subject 1> 的面部表情变化：嘴角微扬，眼神专注，展现出投入的表演状态。此时，四位 <Subject 2> 从舞台两侧缓缓步入画面，她们身着各自旗袍，步伐轻盈，以统一的节奏跟随主舞动作，形成对称式队形排列。\\n第3秒，音乐进入高潮段落，<Subject 1> 跳跃并旋转，手臂高举，完成一次大幅度的转身动作；与此同时，四位 <Subject 2> 分别做出呼应手势：双手上扬、侧身扭动、抬腿摆臂等，动作协调但不失个性。\\n第4秒，镜头拉远至全景，展现完整的舞台布局：<Subject 1> 居中，四名伴舞呈扇形分布，背景城市灯光闪烁，地面投射出斑驳光影。\\n第5秒，所有人物定格于最后一个舞蹈姿势：<Subject 1> 双手张开，身体微弓，目光直视前方；四位 <Subject 2> 则保持各自优雅造型，其中一人抬起右手致意。整个画面充满张力与视觉冲击力，结束于一个极具仪式感的瞬间。\\n\\noverall_soundscape:\\n背景音效包含原音频 <Audio 1> 提供的节奏性鼓点与电子合成音色，配合环境低频震动感，增强舞蹈的律动感。舞台空间中加入轻微回声效果，使声音更具沉浸感。无额外对话或旁白，仅以音乐驱动全场氛围。\\n\\nnon_diegetic_music:\\n使用 <Audio 1> 作为非叙事性配乐，维持原始节奏与情绪走向，强化舞蹈动作的同步性与情感表达。音乐风格偏向现代电子融合传统元素，适合表现跨界艺术表演的主题。\",\"optimizer_report\":\"\",\"original_prompt\":\"<Picture 1>模仿 <Video 1> 视频中得主角跳舞，伴舞为<Picture 2>中的4个人，背景音乐为<Audio 1>\"}}",
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "main_mode": "all_reference",
+        "prompt": "",
+        "aspect": "adaptive",
+        "duration_seconds": 5,
+        "optimizer_enabled": false,
+        "first_frame": "",
+        "last_frame": "",
+        "hybrid_audio": "",
+        "ref_image_1": "",
+        "ref_image_2": "",
+        "ref_image_3": "",
+        "ref_image_4": "",
+        "ref_image_5": "",
+        "ref_image_6": "",
+        "ref_image_7": "",
+        "ref_image_8": "",
+        "ref_image_9": "",
+        "ref_video_1": "",
+        "ref_video_2": "",
+        "ref_video_3": "",
+        "ref_audio_1": "",
+        "ref_audio_2": "",
+        "ref_audio_3": "",
+        "gh_cloud_state_json": "{\"schema_version\":1,\"mode\":\"all_reference\",\"prompt\":\"\",\"aspect\":\"adaptive\",\"duration_seconds\":5,\"media\":[],\"optimizer\":{\"optimizer_state_version\":2,\"config\":{\"mode\":\"api\",\"provider\":\"dashscope\",\"api_url\":\"https://dashscope.aliyuncs.com/compatible-mode/v1\",\"protocol\":\"openai\",\"model\":\"qwen-vl-max\",\"max_tokens\":4096,\"output_language\":\"中文\",\"read_media\":true,\"auto_optimize\":false,\"prompt_profile\":\"concise\"},\"optimized_prompt\":\"subject_definitions:\\n<Subject 1> 是来自 <Picture 1> 的男性，身穿白色衬衫和黑色西裤，站立姿态端正，发型整齐，面部表情沉稳。\\n<Subject 2> 是来自 <Picture 2> 的四位女性，分别穿着黑色、米色、浅粉色和带有花卉图案的旗袍，长发披肩，姿态优雅，具有东方古典美感。\\n<Subject 3> 是来自 <Video 1> 的主角，身着红色紧身服装，动作夸张且富有表现力，在舞台中央进行舞蹈表演，背景为城市夜景或抽象布景。\\n\\nsummary:\\n[reference generation, video continuation, audio reference]\\n\\nretention_analysis:\\n<Picture 1>: partially_preserved - 主体身份与基本外观（白衬衫黑西裤）保留，但动作从静态变为动态舞蹈，模仿视频中主角的舞步；\\n<Picture 2>: attribute_transfer - 四位女性的外貌特征与服饰被完整保留并转化为伴舞角色，其姿态与动作根据主舞节奏同步调整；\\n<Video 1>: attribute_transfer - 视频中的舞蹈动作、编排结构、舞台氛围及镜头运动风格被迁移至新场景，由 <Subject 1> 模仿执行；\\n<Audio 1>: reference - 音频仅作为节奏与情绪参考，不直接复制，用于驱动舞蹈节拍与整体节奏感。\\n\\ndetailed_description:\\n[Shot 1]\\n画面初始为一个中景固定镜头，<Subject 1> 站立于舞台中央，背景为模拟城市夜景的投影幕布，灯光柔和偏暗，营造出戏剧性氛围。随着音乐起始，<Subject 1> 开始模仿 <Video 1> 中主角的标志性舞步——双臂展开，身体前倾，脚步轻快地左右移动，同时头部随节奏轻微摆动。\\n在第1.5秒时，镜头缓慢推进至近景，突出 <Subject 1> 的面部表情变化：嘴角微扬，眼神专注，展现出投入的表演状态。此时，四位 <Subject 2> 从舞台两侧缓缓步入画面，她们身着各自旗袍，步伐轻盈，以统一的节奏跟随主舞动作，形成对称式队形排列。\\n第3秒，音乐进入高潮段落，<Subject 1> 跳跃并旋转，手臂高举，完成一次大幅度的转身动作；与此同时，四位 <Subject 2> 分别做出呼应手势：双手上扬、侧身扭动、抬腿摆臂等，动作协调但不失个性。\\n第4秒，镜头拉远至全景，展现完整的舞台布局：<Subject 1> 居中，四名伴舞呈扇形分布，背景城市灯光闪烁，地面投射出斑驳光影。\\n第5秒，所有人物定格于最后一个舞蹈姿势：<Subject 1> 双手张开，身体微弓，目光直视前方；四位 <Subject 2> 则保持各自优雅造型，其中一人抬起右手致意。整个画面充满张力与视觉冲击力，结束于一个极具仪式感的瞬间。\\n\\noverall_soundscape:\\n背景音效包含原音频 <Audio 1> 提供的节奏性鼓点与电子合成音色，配合环境低频震动感，增强舞蹈的律动感。舞台空间中加入轻微回声效果，使声音更具沉浸感。无额外对话或旁白，仅以音乐驱动全场氛围。\\n\\nnon_diegetic_music:\\n使用 <Audio 1> 作为非叙事性配乐，维持原始节奏与情绪走向，强化舞蹈动作的同步性与情感表达。音乐风格偏向现代电子融合传统元素，适合表现跨界艺术表演的主题。\",\"optimizer_report\":\"\",\"original_prompt\":\"<Picture 1>模仿 <Video 1> 视频中得主角跳舞，伴舞为<Picture 2>中的4个人，背景音乐为<Audio 1>\"}}",
+        "optimized_prompt": "",
+        "optimizer_report": "",
+        "gh_cloud_video_panel": ""
+      }
+    }
+  ],
+  "links": [
+    [
+      6,
+      16,
+      0,
+      17,
+      0,
+      "GHVideoRequest"
+    ],
+    [
+      8,
+      17,
+      4,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      10,
+      17,
+      5,
+      21,
+      0,
+      "STRING"
+    ],
+    [
+      11,
+      16,
+      1,
+      22,
+      0,
+      "STRING"
+    ],
+    [
+      12,
+      16,
+      2,
+      23,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9090909090909091,
+      "offset": [
+        2489.4189889602453,
+        47.139580903992666
+      ]
+    },
+    "frontendVersion": "1.51.9",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
