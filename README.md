@@ -82,7 +82,6 @@ HuTX 总台从 ComfyUI 侧栏进入，三个页面共用同一个存活的节点
 
 ## 快速开始
 
-```powershell
 # 1. 放到 ComfyUI/custom_nodes/ 下，目录名必须是 HuTX-MiniMax-H3-Studio
 #    不要同时保留旧目录，否则节点会重复注册
 
@@ -95,7 +94,7 @@ HuTX 总台从 ComfyUI 侧栏进入，三个页面共用同一个存活的节点
 
 # 5. 可选：安装本地语音运行时
 一键安装本地语音环境.cmd
-```
+
 
 ### 模型目录
 
