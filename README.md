@@ -82,17 +82,17 @@ HuTX 总台从 ComfyUI 侧栏进入，三个页面共用同一个存活的节点
 
 ## 快速开始
 
-# 1. 放到 ComfyUI/custom_nodes/ 下，目录名必须是 HuTX-MiniMax-H3-Studio
-#    不要同时保留旧目录，否则节点会重复注册
+### 1. 放到 ComfyUI/custom_nodes/ 下，目录名必须是 HuTX-MiniMax-H3-Studio
+###    不要同时保留旧目录，否则节点会重复注册
 
-# 2. 安装依赖
+### 2. 安装依赖
 ..\..\python_embeded\python.exe -m pip install -r requirements.txt
 
-# 3. 准备模型（见下表），重启 ComfyUI
+### 3. 准备模型（见下表），重启 ComfyUI
 
-# 4. 浏览器 Ctrl+F5 强制刷新
+### 4. 浏览器 Ctrl+F5 强制刷新
 
-# 5. 可选：安装本地语音运行时
+### 5. 可选：安装本地语音运行时
 一键安装本地语音环境.cmd
 
 
