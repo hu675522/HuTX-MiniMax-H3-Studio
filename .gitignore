@@ -9,4 +9,5 @@ __pycache__/
 .local-smoke-*/
 dist/
 *.log
+video/
 HuTX-CosyVoice-Runtime.zip
