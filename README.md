@@ -225,7 +225,7 @@ python tools/package_plugin_code.py
 模型、API 与音色资源的使用受各自官方条款约束；Fal云端调用会产生费用，请自行确认额度与授权。
 
 ## 作者
-- 微信：[hutongxue168]
+- 微信：hutongxue168
 - 爱发电：[胡同学_168](https://afdian.com/a/hutongxue168?tab=home)
 - B 站：[胡同学_168](https://space.bilibili.com/3707008517671681)
 - Youtube：[胡同学_168](https://www.youtube.com/@%E8%83%A1%E5%90%8C%E5%AD%A6_168)
