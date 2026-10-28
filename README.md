@@ -230,6 +230,14 @@ python tools/package_plugin_code.py
 - B 站：[胡同学_168](https://space.bilibili.com/3707008517671681)
 - Youtube：[胡同学_168](https://www.youtube.com/@%E8%83%A1%E5%90%8C%E5%AD%A6_168)
 
+## 支持作者
+
+如果这个项目帮你省了时间，欢迎扫码请我喝杯咖啡，金额随意：
+
+<img src="docs/images/reward-wechat.png" width="260" alt="微信赞赏码">
+
+> 打赏完全自愿，不影响功能与更新；也欢迎用 Star、Issue 或 PR 支持。
+
 ---
 
 ## Star History
