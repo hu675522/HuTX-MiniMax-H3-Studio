@@ -17,7 +17,7 @@ OUTPUT = ROOT / "dist" / f"HuTX-MiniMax-H3-Studio-v{VERSION}-full.zip"
 PREFIX = "HuTX-MiniMax-H3-Studio"
 EXCLUDE_DIRS = {
     ".git", ".speech-runtime", ".test-artifacts", ".test-deps", ".pytest_cache",
-    ".venv", "dist", "node_modules", "__pycache__",
+    ".venv", "dist", "node_modules", "__pycache__", "video",
 }
 EXCLUDE_SUFFIXES = {".pyc", ".pyo", ".log", ".tmp"}
 
