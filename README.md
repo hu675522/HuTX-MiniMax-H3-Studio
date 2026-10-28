@@ -40,15 +40,15 @@ HuTX 总台从 ComfyUI 侧栏进入，三个页面共用同一个存活的节点
 
 ## 演示视频
 
-以下片段由本插件在 RTX 4070 上生成，保留原始音轨，未做后期；点击封面播放。
+以下片段由本插件在 RTX 4070 上生成，保留原始音轨，未做后期。动图为 2.5 秒无声预览，点击可下载带音轨的完整片段（GitHub 不内嵌播放 MP4）。
 
 | Fused Turbo · 4 步 · 10 秒 | Fused Turbo · 4 步 · 10 秒 |
 |---|---|
-| [![狗特写](docs/images/video-posters/fused-turbo-dog-closeup.jpg)](docs/videos/fused-turbo-dog-closeup.mp4) | [![狗沙发](docs/images/video-posters/fused-turbo-dog-sofa.jpg)](docs/videos/fused-turbo-dog-sofa.mp4) |
+| [![狗特写](docs/images/video-previews/fused-turbo-dog-closeup.gif)](docs/videos/fused-turbo-dog-closeup.mp4) | [![狗沙发](docs/images/video-previews/fused-turbo-dog-sofa.gif)](docs/videos/fused-turbo-dog-sofa.mp4) |
 
 | Fused Turbo · 4 步 · 10 秒 | 双引擎 · 同输入 · 15 秒 |
 |---|---|
-| [![猴子](docs/images/video-posters/fused-turbo-monkey.jpg)](docs/videos/fused-turbo-monkey.mp4) | [![对话](docs/images/video-posters/dual-engine-dialogue.jpg)](docs/videos/dual-engine-dialogue.mp4) |
+| [![猴子](docs/images/video-previews/fused-turbo-monkey.gif)](docs/videos/fused-turbo-monkey.mp4) | [![对话](docs/images/video-previews/dual-engine-dialogue.gif)](docs/videos/dual-engine-dialogue.mp4) |
 
 <details>
 <summary>人像舞蹈演示（含成人向造型，点击展开）</summary>
