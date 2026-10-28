@@ -229,3 +229,9 @@ python tools/package_plugin_code.py
 - GitHub：[hu675522](https://github.com/hu675522)
 - B 站：[胡同学_168](https://space.bilibili.com/3707008517671681)
 - Youtube：[胡同学_168](https://www.youtube.com/@%E8%83%A1%E5%90%8C%E5%AD%A6_168)
+
+---
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=hu675522/HuTX-MiniMax-H3-Studio&type=Date)](https://star-history.com/#hu675522/HuTX-MiniMax-H3-Studio&Date)
