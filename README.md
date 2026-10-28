@@ -226,7 +226,8 @@ python tools/package_plugin_code.py
 
 ## 作者
 
-- GitHub：[hu675522](https://github.com/hu675522)
+- 微信：hutongxue168
+- 爱发电：[胡同学_168](https://afdian.com/a/hutongxue168?tab=home)
 - B 站：[胡同学_168](https://space.bilibili.com/3707008517671681)
 - Youtube：[胡同学_168](https://www.youtube.com/@%E8%83%A1%E5%90%8C%E5%AD%A6_168)
 
