@@ -9,7 +9,7 @@
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%20x64-0078D4?style=flat-square">
 </p>
 
-> **当前状态：v0.3.2.2 开发预览。** 功能可用，但 0.4.0 仍在等待画面/口型人工验收，云端真实计费链路尚未验收。请勿把「执行成功」当作「效果通过」。
+> **当前版本：v0.3.2.2（2026-10 发布）。** 0.4.0 仍在等待画面/口型人工验收，云端真实计费链路尚未验收。请勿把「执行成功」当作「效果通过」。
 
 [使用说明书](MANUAL.md) · [功能亮点](FEATURES.md) · [版本记录](CHANGELOG.md) · [技术文档](docs/)
 
@@ -21,6 +21,20 @@
 - **提示词不再是纯文本**：官方标签可视化、素材 `@` 选择、本地/在线优化、历史对比，全部内嵌在节点里。
 - **声音进同一条流水线**：本地 CosyVoice 或百炼云端克隆、20 种系统音色、A/B/C 多角色，采用后直接锁进视频。
 - **从分镜到成片**：工作台保存镜头快照、逐段生成、断点续跑，最后按入点/出点和音量拼接导出 MP4。
+
+---
+
+## 界面预览
+
+HuTX 总台从 ComfyUI 侧栏进入，三个页面共用同一个存活的节点面板：
+
+| 角色与声音 | 镜头生成 |
+|---|---|
+| ![角色与声音](docs/images/workbench-roles.png) | ![镜头生成](docs/images/workbench-generate.png) |
+
+收起状态下的工作台与画布双栏协作——面板在总台里编辑，画布保持可见：
+
+![工作台总览](docs/images/workbench-overview.png)
 
 ---
 
@@ -181,12 +195,10 @@ python tools/package_plugin_code.py
 
 ## 免责声明
 
-本项目与 MiniMax、阿里云百炼、fal 无隶属关系。
-
-模型、API 与音色资源的使用受各自官方条款约束；云端调用会产生费用，请自行确认额度与授权。
+本项目与 MiniMax、阿里云百炼、fal 无隶属关系。模型、API 与音色资源的使用受各自官方条款约束；云端调用会产生费用，请自行确认额度与授权。
 
 ## 作者
 
 - GitHub：[hu675522](https://github.com/hu675522)
-- B 站：[胡同学_168](https://space.bilibili.com/3707008517671681)
-- Youtube：[胡同学_168](https://www.youtube.com/@%E8%83%A1%E5%90%8C%E5%AD%A6_168)
+- B 站：[孤海FOTO](https://space.bilibili.com/1194488958)
+- RunningHub：[个人主页](https://www.runninghub.cn/user-center/1959241033525714946/webapp?inviteCode=rh-v1557)

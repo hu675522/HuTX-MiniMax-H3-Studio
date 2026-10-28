@@ -1,6 +1,6 @@
 # HuTX · MiniMax H3 Studio 使用说明书
 
-> 版本：**v0.3.2.2（开发预览）** · 最后更新：2026-10
+> 版本：**v0.3.2.2** · 最后更新：2026-10
 > 适用环境：ComfyUI（实测 0.41.0）+ Windows x64 + NVIDIA GPU
 > 相关文档：[功能亮点](FEATURES.md) · [版本记录](CHANGELOG.md) · [技术细节](docs/)
 
